@@ -2,7 +2,7 @@
 
 BLOCK=$1
 
-NONCE=1
+NONCE=$2
 
 # hash=$(sha512sum $BLOCK)
 
@@ -12,7 +12,15 @@ echo $NONCE >> temp_block.txt
 
 hash_value=$(sha512sum temp_block.txt)
 
-echo $hash_value
+if [[ "$hash_value" != "$hash_value" ]]; then
+  echo fine
+else 
+  NONCE=$((NONCE + 1))
+  echo $NONCE
+  echo Not fine
+  echo Calling script again
+  ./script.sh $1 $NONCE
+fi
 
 # sha512sum $BLOCK
 
