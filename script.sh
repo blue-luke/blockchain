@@ -12,8 +12,11 @@ echo $NONCE >> temp_block.txt
 
 hash_value=$(sha512sum temp_block.txt)
 
-if [[ "$hash_value" != "$hash_value" ]]; then
+START=${hash_value:0:1}
+
+if [[ "$START" == "0" ]]; then
   echo fine
+  echo $hash_value
 else 
   NONCE=$((NONCE + 1))
   echo $NONCE
