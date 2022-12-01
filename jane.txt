@@ -1,2 +1,2 @@
-Jane pays John 10 BTC
+Jane pays John 56 BTC
 Jane's new balance is 5 BTC
