@@ -1,0 +1,10 @@
+I can only create 2666 child processes
+So if there are more than 2666 loops of the script calling itself, it stops
+ulimit -a
+ulimit -Hu 10000 supposedly increases the hard limits, but this doesn't work
+
+But refactoring so that the script calls a function also produces resource faults: segmentation fault
+
+Refactor using ruby, and test drive?
+
+
