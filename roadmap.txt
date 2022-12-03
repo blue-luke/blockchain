@@ -1,0 +1,6 @@
+Returning a string
+Calculating a 64 character output
+Accepts a nonce
+Checks hash value starts with 1 0
+Checks hash value starts with n 0s
+Accepts a previous block
