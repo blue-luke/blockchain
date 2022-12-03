@@ -1,3 +1,3 @@
 def calculate(string)
-  return string
+  return string + string + string + "abcd"
 end
