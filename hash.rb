@@ -6,6 +6,7 @@ def calculate(string, start_condition, nonce=1)
   hash_value = Digest::SHA256.hexdigest block
 
   if hash_value[0,1] == start_condition
+    print 'Nonce was' + nonce.to_s 
     return hash_value
   else
     nonce+=1
