@@ -1,3 +1,4 @@
 def calculate(string, nonce)
-  return string + string + string + "abcd" + nonce.to_s
+  output= nonce.to_s + string + string + string + "abcd"
+  return output[0, 64]
 end
