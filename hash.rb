@@ -1,7 +1,5 @@
 require 'digest'
 
-nonce=1
-
 def calculate(string, start_condition, nonce=1)
   block = string + nonce.to_s
 
