@@ -11,6 +11,4 @@ def calculate(string, start_condition, nonce=1)
     nonce+=1
     calculate(string, start_condition, nonce)
   end
-  # intermediate_hash = Digest::SHA256.hexdigest block
-  # final_hash = (start_condition + intermediate_hash)[0,64]
 end

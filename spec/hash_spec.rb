@@ -7,9 +7,11 @@ describe "calculate" do
   it "returns a different output for a different input" do
     expect(calculate("Jane pays John 10BTC", "0")).not_to eq(calculate("Jane pays Alan 10BTC", "0"))
   end
-  it "finds a hash value that has one 0 at the beginning" do
-    # Where second argument is value of the start condition
-    hash = calculate("Jane pays John 10BTC", "0")
-    expect(hash[0,1]).to eq("0")
+  it "finds a hash value that has a specific character at the beginning" do
+    characters = ('0'..'9').to_a + ('a'..'f').to_a
+    character = characters.sample
+
+    hash = calculate("Jane pays John 10BTC", character)
+    expect(hash[0,1]).to eq(character)
   end
 end
