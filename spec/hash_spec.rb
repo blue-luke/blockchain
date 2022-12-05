@@ -14,4 +14,7 @@ describe "calculate" do
     hash = calculate("Jane pays John 10BTC", character)
     expect(hash[0,1]).to eq(character)
   end
+  it "prevents the entry of invalid start conditions" do
+    expect(calculate("Jane pays John 10BTC", "0")).to eq("Error: condition must be hex, 0-9a-f")
+  end
 end
