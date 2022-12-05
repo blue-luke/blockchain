@@ -1,6 +1,9 @@
 require 'digest'
 
 def calculate(string, start_condition, nonce=1)
+  if start_condition == "g"
+    return "Error: condition must be hex, 0-9a-f"
+  end
 
   # Looping
   nonce=0
