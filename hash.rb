@@ -1,11 +1,11 @@
 require 'digest'
 
-def calculate(string, start_condition, nonce=0)
+def calculate(text:, start_condition:, previous_hash: "", block_number: "", nonce: 0)
 
   # Looping
   start = Time.now
   loop do
-    block = string + nonce.to_s
+    block = text + nonce.to_s
     hash_value = Digest::SHA256.hexdigest block
     if hash_value[0,start_condition.length] == start_condition
       finish = Time.now
@@ -18,6 +18,16 @@ def calculate(string, start_condition, nonce=0)
     nonce+=1
   end
 
+end
+
+
+
+
+
+
+
+
+
   # Recursing
   # block = string + nonce.to_s
   # hash_value = Digest::SHA256.hexdigest block
@@ -28,4 +38,3 @@ def calculate(string, start_condition, nonce=0)
   #   nonce+=1
   #   calculate(string, start_condition, nonce)
   # end
-end

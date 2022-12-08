@@ -1,2 +1,6 @@
-Jane pays John 19 BTC
+Jane pays John 100000 BTC
 Jane's new balance is 5 BTC
+Greg has 200BTC
+Previous hash = aaaaaa8bce93bd5c016e9d8ac56924bd536ab90ec2e8b759c4aab89af50a48e9
+Block number = 4
+Nonce for this block = 
