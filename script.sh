@@ -9,7 +9,7 @@ compute () {
   echo \ >> temp_block.txt
   echo $NONCE >> temp_block.txt
 
-  hash_value=$(sha512sum temp_block.txt)
+  hash_value=$(shasum -a 256 temp_block.txt)
 
   START=${hash_value:0:3}
 
